@@ -1,0 +1,14 @@
+Describe any design decisions you made, including your choice of page eviction policy. If you used something other than a nested-loops join, describe the tradeoffs of the algorithm you chose.
+	BufferPool: Linked List as a queue to easily get old, new items for LRU eviction
+	Aggregtors: HashMap from groupby field to SQL Aggregates (a class that holds COUNT, MIN, MAX, etc)
+
+Discuss and justify any changes you made to the API.
+	None.
+
+Describe any missing or incomplete elements of your code.
+	None that I know of. 
+
+Describe how long you spent on the project, and whether there was anything you found particularly difficult or confusing.
+	15-20 hrs. Query Parser 2.7. Debugging this was extremely hard. I used Piazza a week early and went to 2 OH and still didn't find the reason. It was hard since the error was being thrown in the RandomAccessFile constructor- not my own methods. getFile() was not returning a null item either. Then it turned out to be in the skeleton code....
+
+	

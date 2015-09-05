@@ -1,0 +1,38 @@
+            long start = System.currentTimeMillis();
+            if(perm.toString().equals(perm.READ_ONLY.toString())){
+                ArrayList<TransactionId> tids = new ArrayList<TransactionId>();
+                while(lockManager.exclusiveLocks.containsKey(pid) ){//if page already has an xLock, block other transactions
+                    //if the xLock belongs to this transaction, proceed
+                    if (System.currentTimeMillis() - start > 400){
+                        throw new TransactionAbortedException();
+                    }
+                    if(lockManager.exclusiveLocks.containsKey(pid) && lockManager.exclusiveLocks.get(pid).equals(tid))
+                        break;
+                    
+                }
+                if(lockManager.sharedLocks.contains(pid))
+                    tids = lockManager.sharedLocks.get(pid);
+                tids.add(tid);
+                lockManager.sharedLocks.put(pid, tids);
+                
+            }
+            if(perm.toString().equals(perm.READ_WRITE.toString())){
+                
+                while(true){
+                    if (System.currentTimeMillis() - start > 400){
+                        throw new TransactionAbortedException();
+                    }
+
+                    //if htere is no exclusive lock or shared lock, proceed
+                    if(!lockManager.exclusiveLocks.containsKey(pid) 
+                            && (!lockManager.sharedLocks.containsKey(pid) || lockManager.sharedLocks.get(pid).isEmpty()))
+                        break;
+                    //if the xLock belongs to this transaction, proceed
+                    if(lockManager.exclusiveLocks.containsKey(pid) && lockManager.exclusiveLocks.get(pid).equals(tid))
+                        break;
+                    //if this transaction is only one holding sLock, upgrade
+                    if( lockManager.sharedLocks.get(pid).size() == 1 && lockManager.sharedLocks.get(pid).contains(tid))
+                        break;
+                }
+                lockManager.exclusiveLocks.put(pid, tid);
+            }

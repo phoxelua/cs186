@@ -1,0 +1,147 @@
+Buildfile: /media/sf_cs186/CS186-proj2/build.xml
+  [taskdef] Could not load definitions from resource net/sf/antcontrib/antlib.xml. It could not be found.
+
+compile:
+    [javac] Compiling 1 source file to /media/sf_cs186/CS186-proj2/bin/src
+    [javac] /media/sf_cs186/CS186-proj2/src/java/simpledb/BufferPool.java:167: cannot find symbol
+    [javac] symbol  : method first()
+    [javac] location: interface java.util.Set<java.lang.Integer>
+    [javac]         int random = (int) pool.keySet().first();
+    [javac]                                         ^
+    [javac] 1 error
+Buildfile: /media/sf_cs186/CS186-proj2/build.xml
+  [taskdef] Could not load definitions from resource net/sf/antcontrib/antlib.xml. It could not be found.
+
+compile:
+    [javac] Compiling 1 source file to /media/sf_cs186/CS186-proj2/bin/src
+    [javac] /media/sf_cs186/CS186-proj2/src/java/simpledb/BufferPool.java:168: ';' expected
+    [javac]         Set keys =  pool.keySet();
+    [javac]            ^
+    [javac] 1 error
+Buildfile: /media/sf_cs186/CS186-proj2/build.xml
+  [taskdef] Could not load definitions from resource net/sf/antcontrib/antlib.xml. It could not be found.
+
+compile:
+    [javac] Compiling 1 source file to /media/sf_cs186/CS186-proj2/bin/src
+    [javac] /media/sf_cs186/CS186-proj2/src/java/simpledb/BufferPool.java:169: foreach not applicable to expression type
+    [javac]         for (Integer k : keys.iterator()){
+    [javac]                                       ^
+    [javac] 1 error
+Buildfile: /media/sf_cs186/CS186-proj2/build.xml
+  [taskdef] Could not load definitions from resource net/sf/antcontrib/antlib.xml. It could not be found.
+
+compile:
+    [javac] Compiling 1 source file to /media/sf_cs186/CS186-proj2/bin/src
+    [javac] /media/sf_cs186/CS186-proj2/src/java/simpledb/BufferPool.java:169: illegal start of expression
+    [javac]         while (keys.hasNext())){
+    [javac]                               ^
+    [javac] 1 error
+Buildfile: /media/sf_cs186/CS186-proj2/build.xml
+  [taskdef] Could not load definitions from resource net/sf/antcontrib/antlib.xml. It could not be found.
+
+compile:
+    [javac] Compiling 1 source file to /media/sf_cs186/CS186-proj2/bin/src
+    [javac] /media/sf_cs186/CS186-proj2/src/java/simpledb/BufferPool.java:170: cannot find symbol
+    [javac] symbol  : variable k
+    [javac] location: class simpledb.BufferPool
+    [javac]             random = k;
+    [javac]                      ^
+    [javac] 1 error
+Buildfile: /media/sf_cs186/CS186-proj2/build.xml
+  [taskdef] Could not load definitions from resource net/sf/antcontrib/antlib.xml. It could not be found.
+
+compile:
+    [javac] Compiling 1 source file to /media/sf_cs186/CS186-proj2/bin/src
+    [javac] /media/sf_cs186/CS186-proj2/src/java/simpledb/BufferPool.java:170: incompatible types
+    [javac] found   : java.lang.Object
+    [javac] required: int
+    [javac]             random = keys.next();
+    [javac]                               ^
+    [javac] 1 error
+Buildfile: /media/sf_cs186/CS186-proj2/build.xml
+  [taskdef] Could not load definitions from resource net/sf/antcontrib/antlib.xml. It could not be found.
+
+compile:
+    [javac] Compiling 1 source file to /media/sf_cs186/CS186-proj2/bin/src
+
+testcompile:
+
+runsystest:
+    [junit] Running simpledb.systemtest.InsertTest
+    [junit] Testsuite: simpledb.systemtest.InsertTest
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 2.53 sec
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 2.53 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Priting rQ of size 1 : [1486553088]
+    [junit] Priting rQ of size 2 : [1486553088, -404619264]
+    [junit] Priting rQ of size 2 : [1486553088, -404619264]
+    [junit] Priting rQ of size 1 : [-1181220864]
+    [junit] Priting rQ of size 2 : [-1181220864, -220397568]
+    [junit] Priting rQ of size 2 : [-1181220864, -220397568]
+    [junit] Priting rQ of size 1 : [-286261248]
+    [junit] Priting rQ of size 2 : [-286261248, 1443627008]
+    [junit] INSERT: FILTHY PAGES: 1443627008
+    [junit] Before: [-286261248, 1443627008]
+    [junit] After:  [-286261248, 1443627008]
+    [junit] Priting rQ of size 2 : [-286261248, 1443627008]
+    [junit] Priting rQ of size 2 : [-286261248, 1443627008]
+    [junit] Priting rQ of size 1 : [554106880]
+    [junit] Priting rQ of size 2 : [554106880, 571211776]
+    [junit] INSERT: FILTHY PAGES: 571211776
+    [junit] Before: [554106880, 571211776]
+    [junit] After:  [554106880, 571211776]
+    [junit] Priting rQ of size 2 : [554106880, 571211776]
+    [junit] Priting rQ of size 2 : [554106880, 571211776]
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testEmptyToEmpty took 1.674 sec
+    [junit] Testcase: testEmptyToOne took 0.162 sec
+    [junit] Testcase: testOneToEmpty took 0.105 sec
+    [junit] Testcase: testOneToOne took 0.128 sec
+
+BUILD SUCCESSFUL
+Total time: 29 seconds
+Buildfile: /media/sf_cs186/CS186-proj2/build.xml
+  [taskdef] Could not load definitions from resource net/sf/antcontrib/antlib.xml. It could not be found.
+
+compile:
+    [javac] Compiling 1 source file to /media/sf_cs186/CS186-proj2/bin/src
+
+testcompile:
+
+runsystest:
+    [junit] Running simpledb.systemtest.InsertTest
+    [junit] Testsuite: simpledb.systemtest.InsertTest
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 2.56 sec
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 2.56 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Priting rQ of size 1 : [484507648]
+    [junit] Priting rQ of size 2 : [484507648, 555155456]
+    [junit] Priting rQ of size 2 : [484507648, 555155456]
+    [junit] Priting rQ of size 1 : [-335413248]
+    [junit] Priting rQ of size 2 : [-335413248, 882442240]
+    [junit] Priting rQ of size 2 : [-335413248, 882442240]
+    [junit] Priting rQ of size 1 : [-1984102400]
+    [junit] Priting rQ of size 2 : [-1984102400, -145424384]
+    [junit] INSERT: FILTHY PAGES: -145424384
+    [junit] Before: [-1984102400, -145424384]
+    [junit] After:  [-1984102400, -145424384]
+    [junit] Priting rQ of size 2 : [-1984102400, -145424384]
+    [junit] Priting rQ of size 2 : [-1984102400, -145424384]
+    [junit] Priting rQ of size 1 : [-897908736]
+    [junit] Priting rQ of size 2 : [-897908736, -1908670464]
+    [junit] INSERT: FILTHY PAGES: -897908736
+    [junit] INSERT: FILTHY PAGES: -897908736
+    [junit] Before: [-897908736, -1908670464]
+    [junit] After:  [-1908670464, -897908736]
+    [junit] Priting rQ of size 2 : [-897908736, -1908670464]
+    [junit] Priting rQ of size 2 : [-897908736, -1908670464]
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testEmptyToEmpty took 1.546 sec
+    [junit] Testcase: testEmptyToOne took 0.291 sec
+    [junit] Testcase: testOneToEmpty took 0.114 sec
+    [junit] Testcase: testOneToOne took 0.1 sec
+
+BUILD SUCCESSFUL
+Total time: 28 seconds
